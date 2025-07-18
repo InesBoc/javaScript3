@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../TP_3/CSS/styles.css">
+    <link rel="icon" href="IMG/maiLogo.jpeg" type="image/x-icon"   >
+    <title>MAI COSMETICS</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home"></a>HOME</a></li>
+                <li><a href="#catalogo">CATALOGO</a></li>
+                <li><a href="#promociones">PROMOS</a></li>
+                <li><a href="#accesorios">ACCESORIOS</a></li>
+                <li><a href="#consultas">CONSULTAS</a></li>
+                <li><a href="#contacto">CONTACTO</a></li>
+         
+            </ul>
+        </nav>
+    </header>
+   <main>
+        
+
+    <h1 class="nombre1" id="home">MAI</h1> 
+    <h2 class="nombre2">COSMETICS</h2>
+    <h3>Bienvenid@ a nuestra tienda on line de artículos de maquillaje y accesorios. 
+    <br>Aquí encontrarás una amplia variedad de productos para potenciar tu belleza. 
+    <br>Hacemos envíos</h3>
+    <h2 class= "titulo" id="catalogo"> CATALOGO</h2>
+  <section class="contenido" > 
+    <div class="mostrador" id="mostrador"></div>
+    <div class="seleccion" id="seleccion">
+      <div class="cerrar" onclick="cerrar()">X</div>
+      <div class="info">
+        <img id="img" src="" alt="Producto seleccionado">
+        <h2 id="modelo"></h2>
+        <p id="descripcion"></p>
+        <span class="precio" id="precio"></span>
+        <div>
+          <label for="tonos">TONOS DISPONIBLES</label>
+          <select id="tonos"></select>
+        </div>
+        <button onclick="agregarAlCarrito()">AGREGAR AL CARRITO</button>
+      </div>
+    </div>
+  </section>
+
+    <h2 class= "titulo" id="promociones"> PROMOCIONES</h2>
+<section class="contenido-promos" >
+    <div class="mostrador-promos" id="mostrador-promos"></div>
+    <div class="seleccion-promos" id="seleccion-promos">
+      <div class="cerrar" onclick="cerrar()">X</div>
+      <div class="info">
+        <img id="img" src="" alt="Producto seleccionado">
+        <h2 id="modelo"></h2>
+        <p id="descripcion"></p>
+        <span class="precio" id="precio"></span>
+        <div>
+          <label for="tonos">TONOS DISPONIBLES</label>
+          <select id="tonos"></select>
+        </div>
+        <button onclick="agregarAlCarrito()">AGREGAR AL CARRITO</button>
+      </div>
+    </div>
+  </section>
+    <h2 class= "titulo" id="accesorios"> ACCESORIOS</h2>
+<section class="contenido-accesorios" >
+    <div class="mostrador-accesorios" id="mostrador-accesorios"></div>
+  </section>
+  <div class="carrito" id="carrito">
+    <h3>Carrito</h3>
+    <div id="carrito-items"></div>
+    <div class="carrito-total" id="carrito-total">Total: $0</div>
+    <button class="btn-vaciar"onclick="comprarCarrito()">Comprar</button>
+    <button class="btn-vaciar" onclick="vaciarCarrito()">Vaciar carrito</button>
+  </div>
+  <div id="consultas">
+    <h2 class="titulo">CONSULTAS</h2>
+    <form class="formulario" action="" method="post">        
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="consulta">Consulta:</label>
+        <textarea id="consulta" name="consulta" rows="10" required placeholder="Dejanos tu consulta"></textarea>
+        <button type="submit" class="btn-vaciar">Enviar</button>
+    </FORM>
+  </div>
+    <footer>
+        <section class="footerLogo">
+            <img src="IMG/maiLogo.jpeg" alt="logo">
+        </section>
+        <section class="footerMenu">
+            <nav class="footerNav">
+               <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#catalogo">CATALOGO</a></li>
+                <li><a href="#promociones">PROMOS</a></li>
+                <li><a href="#accesorios">ACCESORIOS</a></li>
+                <li><a href="#consultas">CONSULTAS</a></li>
+                <li><a href="#contacto">CONTACTO</a></li>
+         
+            </ul>
+             </nav>
+          
+        <section class="footerCopy">
+       <h6 class="derechos"> © 2025   Derechos Reservados</h6>
+        </section>
+        
+    </section>  
+        <section class="footerRedes" id="contacto">
+            <a href="https://www.instagram.com/maicosmetics.tuc/" target="_blank"><img class="insta" src="IMG/instagram.jpg"></a>
+            <a href="https://wa.me/5493814447681" target="_blank"><img src="IMG/ico_whatsapp.png"></a>
+        </section>
+    </footer>
+    <script src="JS/script.js"></script>
+     
+</body>
+</html>
