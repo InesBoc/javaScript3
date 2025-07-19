@@ -71,15 +71,17 @@ function abrirDetalleProducto(i) {
   } else {
     tonosSel.innerHTML = `<option value="default">Único tono</option>`;
   }
-
-  seleccion.classList.add("visible");
+    seleccion.classList.add("visible");
+    mostrador.style.width = "60%";
+    seleccion.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 
 
 function cerrar() {
   seleccion.classList.remove("visible");
-   mostrador.style.width = "100%";
+  mostrador.style.width = "100%";
+ 
 }
 
 
@@ -281,7 +283,7 @@ function cerrar(){
     seleccion.classList.remove("visible");
     mostrador.style.width = "100%";
 }
-//hasta aqui
+
 function agregarAlCarrito(){
   const tono = tonosSel.value;
   const nombre = productoActual.name || productoActual.nombre;
@@ -326,7 +328,6 @@ function comprarCarrito() {
 
     vaciarCarrito();
 }
-
 
 
 function vaciarCarrito(){
