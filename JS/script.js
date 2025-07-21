@@ -11,7 +11,9 @@ const decripSel = document.getElementById("descripcion");
 const precioSel = document.getElementById("precio");
 const tonosSel = document.getElementById("tonos");
 const carritoDiv = document.getElementById("carrito-items");
+const carritoContenedor= document.getElementById("carrito");
 const totalDiv = document.getElementById("carrito-total");
+const btnCarrito = document.getElementById("carrito-responsive");
 
 let productosApi = [];
 let productoActual = null;
@@ -312,6 +314,21 @@ function actualizarCarrito(){
     });
       totalDiv.innerText = `Total: $${total.toLocaleString()}`;
 }
+//cuando hago clik, la pantalla hace scroll hacia carrito y muestra los productos
+
+btnCarrito.addEventListener("click", () => {
+  const estilo = window.getComputedStyle(carritoContenedor);
+
+  if (estilo.display === "none") {
+    carritoContenedor.style.display = "block"; // mostrar
+    carritoContenedor.scrollIntoView({ behavior: "smooth", block: "start" }); // hacer scroll
+  } else {
+    carritoContenedor.style.display = "none"; // ocultar
+  }
+}); 
+
+
+    
 function comprarCarrito() {
     if (carrito.length === 0) {
         alert("El carrito está vacío. Agrega productos antes de comprar.");
